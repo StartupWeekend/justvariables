@@ -21,12 +21,12 @@ jQuery(document).ready(function(){
 		return false;
 	});
 	
-	// init delete button
-	jQuery('#jv_settings a.delete_variable').live('click', function(){
-		if( confirm( text_just_variables.confirm_delete ) ){
+	// init delete button  
+  jQuery(document.body).on('click', '#jv_settings a.delete_variable', function() {
+    if( confirm( text_just_variables.confirm_delete ) ){
 			jQuery(this).parents('tr:first').remove();
 		}
 		return false;
-	});
+  });
 	
 });
